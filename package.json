@@ -1,0 +1,55 @@
+{
+  "name": "@juggle/resize-observer",
+  "version": "0.6.0",
+  "description": "ResizeObserver - Based on the official draft specification",
+  "main": "./lib/ResizeObserver.js",
+  "files": [
+    "lib/**/*.{js,ts}",
+    "src/**/*.ts"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "ci-tests": "npm test -- --ci --runInBand && cat coverage/lcov.info | coveralls",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/juggle/resize-observer.git"
+  },
+  "keywords": [
+    "ResizeObserver",
+    "polyfill",
+    "ponyfill",
+    "event",
+    "resize",
+    "observer",
+    "typescript",
+    "javascript",
+    "window",
+    "document",
+    "onresize",
+    "element",
+    "component",
+    "web components",
+    "webcomponents",
+    "front-end",
+    "html"
+  ],
+  "author": "Juggle",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/juggle/resize-observer/issues"
+  },
+  "homepage": "https://github.com/juggle/resize-observer#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-junit": "^6.0.1",
+    "jsdom": "^13.1.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  }
+}
